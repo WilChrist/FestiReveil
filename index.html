@@ -59,7 +59,7 @@ http://www.templatemo.com/tm-486-new-event
 
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="/#intro" class="smoothScroll">Accueil</a></li>
-				<li><a href="#overview" class="smoothScroll">Préambule</a></li>
+				<li><a href="#overview" class="smoothScroll">Introduction</a></li>
 				<li><a href="#speakers" class="smoothScroll">Speakers</a></li>
 				<li><a href="#program" class="smoothScroll">Programme</a></li>
 				<li><a href="#register" class="smoothScroll">Dons</a></li>
@@ -140,7 +140,7 @@ http://www.templatemo.com/tm-486-new-event
 				<i class="fa fa-dove" style="color: green"></i>
 				<h3>Festi <span style="color: green">Style</span></h3>
 				<p class="white">Accéder à un style de vie renouvellé, épuré par la Parole de Dieu, Selon le modèle parfait qu'est Christ 
-					<br/><a href="blog/?page_id=58" class="btn btn-lg btn-default smoothScroll wow fadeInUp mybtn" data-wow-delay="1.3s">Ici</a> 
+					<br/><a href="blog/?page_id=58" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1.3s">Ici</a> 
 				</p>
 			</div>
 
@@ -148,7 +148,7 @@ http://www.templatemo.com/tm-486-new-event
 				<i class="fa fa-hand-holding-heart" style="color: red"></i>
 				<h3>Festi <span style="color: red">Prière</span></h3>
 				<p class="white">Dieu aime et veut communier avec ses enfants, profitons en pour lui parler, ensemble, de ces sujets
-					<br/><a href="blog/?page_id=58" class="btn btn-lg btn-default smoothScroll wow fadeInUp mybtn" data-wow-delay="1.6s">Ici</a>
+					<br/><a href="blog/?page_id=58" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1.6s">Ici</a>
 				</p>
 			</div>
 
@@ -156,14 +156,14 @@ http://www.templatemo.com/tm-486-new-event
 				<i class="fa fa-book-open" style="color: red"></i>
 				<h3>Festi <span style="color: red">Méditation</span></h3>
 				<p class="white">Parce que sa parole et la vérité, elle mérite d'être l'objet de notre méditation, pour notre piété 
-					<br/><a href="blog/?page_id=58" class="btn btn-lg btn-default smoothScroll wow fadeInUp mybtn" data-wow-delay="1.9s">Ici</a>
+					<br/><a href="blog/?page_id=58" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="1.9s">Ici</a>
 				</p>
 			</div>
 			<div class="wow fadeInRight col-md-3 col-sm-3" data-wow-delay="1.2s">
 					<i class="fa fa-microphone" style="color: yellow"></i>
 					<h3>Festi <span style="color: yellow">Art</span></h3>
 					<p class="white">Quand l'Art retrouve son but originel : célébrér le créateur via les merveilles dont il a fait grâce aux humains
-						<br/><a href="blog/?page_id=58" class="btn btn-lg btn-default smoothScroll wow fadeInUp mybtn" data-wow-delay="2.2s">Ici</a>
+						<br/><a href="blog/?page_id=58" class="btn btn-lg btn-default smoothScroll wow fadeInUp" data-wow-delay="2.2s">Ici</a>
 					</p>
 				</div>
 
@@ -736,6 +736,21 @@ http://www.templatemo.com/tm-486-new-event
 <script src="js/smoothscroll.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="js/custom.js"></script>
-
+<script>
+	 $(function() {
+       $('a[href*="#"]:not([href="#"])').click(function() {
+         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+           var target = $(this.hash);
+           target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+           if (target.length) {
+             $('html, body').animate({
+               scrollTop: target.offset().top
+             }, 1000);
+             return false;
+           }
+         }
+       });
+     });
+</script>
 </body>
 </html>
